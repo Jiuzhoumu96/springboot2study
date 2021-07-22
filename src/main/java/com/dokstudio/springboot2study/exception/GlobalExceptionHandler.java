@@ -44,6 +44,7 @@ public class GlobalExceptionHandler {
         errorResponse.setError(HttpStatus.INTERNAL_SERVER_ERROR.name());
         errorResponse.setMessage(e.getMessage());
         errorResponse.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        errorResponse.setPath(request.getRequestURI());
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
