@@ -8,6 +8,11 @@ class Springboot2studyApplicationTests {
 
     @Test
     void contextLoads() {
+
+        //String str = "abcdefgh";
+
+        //String sss=String.format("hhhhh{%s}hhhhhhhh%shhhhhhhhhh{}hhhhhhh","asd","asd");
+        System.out.println("bvadsv");
     }
 
 }

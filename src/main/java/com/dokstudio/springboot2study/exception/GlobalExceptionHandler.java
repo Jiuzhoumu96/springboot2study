@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +26,7 @@ public class GlobalExceptionHandler {
      * @param e
      * @return
      */
+    @ResponseBody
     @ExceptionHandler(MyException.class)
     public ResponseEntity<ErrorResponse> myErrorHandler(HttpServletRequest request, MyException e) {
         LOGGER.error(e.getMessage(), e);
@@ -36,7 +38,8 @@ public class GlobalExceptionHandler {
         errorResponse.setPath(request.getRequestURI());
         return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(e.getStatus()));
     }
-
+    @ResponseBody
+    @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> commonErrorHAndler(HttpServletRequest request, Exception e) {
         LOGGER.error(e.getMessage(), e);
         ErrorResponse errorResponse = new ErrorResponse();

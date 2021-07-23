@@ -13,7 +13,8 @@ public class MyException {
 
         MyException myException = new MyException();
         ErrorResponse errorResponse = new ErrorResponse();
-
+        String sss = String.format("hhhhh{%s}hhhhhhhh%shhhhhhhhhh{}hhhhhhh", "asd", "asd");
+        System.out.println(sss);
     }
 
 

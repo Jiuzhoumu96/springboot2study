@@ -15,7 +15,7 @@ public class MyException extends RuntimeException {
     /**
      * 状态码
      */
-    private final int status;
+    private final Integer status;
 
     /**
      * 错误信息

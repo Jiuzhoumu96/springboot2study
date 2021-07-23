@@ -21,7 +21,7 @@ import java.util.Date;
 public class Human {
 
     @Id
-    String humanId;
+    Integer humanId;
 
     String humanName;
 

@@ -20,7 +20,7 @@ import javax.persistence.Table;
 public class Dog extends Animal {
 
     @Id
-    String dogId;
+    Integer dogId;
 
     String dogName;
 
