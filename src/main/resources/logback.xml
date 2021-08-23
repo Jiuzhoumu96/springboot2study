@@ -2,7 +2,7 @@
 
 <configuration>
 
-    <property name="logRoot" value="D:/logback/" />
+    <property name="logRoot" value="C:/logback/" />
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
