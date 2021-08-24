@@ -11,18 +11,18 @@ spring:
       max-file-size: 10MB
   banner:
     image:
-      location: classpath:banner_fozu.txt
-  datasource:
-    url: jdbc:mysql://localhost:3306/springboot2studysql?characterEncoding=UTF-8&useUnicode=true&serverTimezone=GMT%2B8
-    username: root
-    password: 666666
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    jpa:
-      database: mysql
-      hibernate:
-        dd1-auto: update
-      show-sql: true
-      database-platform: org.hibernate.dialect.MySQLDialect
+      location: classpath:banner.txt
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/springboot2studysql?characterEncoding=UTF-8&useUnicode=true&serverTimezone=GMT%2B8
+#    username: root
+#    password: 666666
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    jpa:
+#      database: mysql
+#      hibernate:
+#        dd1-auto: update
+#      show-sql: true
+#      database-platform: org.hibernate.dialect.MySQLDialect
 
 
 com:
@@ -33,7 +33,8 @@ com:
 #mycar:
 #  brand: BYD
 #  price: 120000
-##debug: true
+
+#debug: true
 
 ## yaml表示以上对象
 #person:
