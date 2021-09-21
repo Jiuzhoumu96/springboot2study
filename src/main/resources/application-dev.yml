@@ -2,6 +2,7 @@
 server:
   port: 14914
 #  servlet:
+#    context-path: /lanhuigu
 #    encoding:
 #      charset: GBK
 
