@@ -1,5 +1,6 @@
 package com.lanhuigu.springboot2study.config;
 
+import com.lanhuigu.springboot2study.interceptor.LoginInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
@@ -24,8 +25,8 @@ public class AdminWebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // WebMvcConfigurer.super.addInterceptors(registry);
-        // registry.addInterceptor(new LoginInterceptor())
-        //         .addPathPatterns("/**") // 所有的请求都被拦截，包括静态资源
-        //         .excludePathPatterns("/", "login", "/css/**", "/fonts/**", "/images/**", "/js/**"); // 放行的资源
+        registry.addInterceptor(new LoginInterceptor())
+                .addPathPatterns("/**") // 所有的请求都被拦截，包括静态资源
+                .excludePathPatterns("/", "login", "/css/**", "/fonts/**", "/images/**", "/js/**"); // 放行的资源
     }
 }
