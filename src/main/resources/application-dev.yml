@@ -1,6 +1,6 @@
 #测试环境
 server:
-  port: 14914
+  port: 12914
 #  servlet:
 #    context-path: /lanhuigu
 #    encoding:
