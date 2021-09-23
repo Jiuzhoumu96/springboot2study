@@ -20,8 +20,7 @@ public class IndexController {
 
     private static final Logger log = LoggerFactory.getLogger(IndexController.class);
 
-    // @GetMapping(value = {"/", "/login"})
-    @GetMapping(value = "/testss")
+    @GetMapping(value = {"/", "/login"})
     public String loginPage() {
         log.info(">>>>>> IndexController.loginPage");
         return "login";
