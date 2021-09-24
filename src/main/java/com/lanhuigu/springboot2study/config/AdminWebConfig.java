@@ -27,6 +27,6 @@ public class AdminWebConfig implements WebMvcConfigurer {
         // WebMvcConfigurer.super.addInterceptors(registry);
         registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns("/**") // 所有的请求都被拦截，包括静态资源
-                .excludePathPatterns("/", "/login", "/css/**", "/fonts/**", "/images/**", "/js/**","/error"); // 放行的资源
+                .excludePathPatterns("/", "/login", "/css/**", "/fonts/**", "/images/**", "/js/**","/error","swagger-ui.html","/favicon.ico"); // 放行的资源
     }
 }

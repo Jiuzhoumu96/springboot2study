@@ -25,6 +25,11 @@ spring:
     multipart:
       max-file-size: 10MB
 
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+    - classpath*:com/**/mapper/*.xml
+
 com:
   dokstudio:
     canghaisangtian: cangHaiSangTian
