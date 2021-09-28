@@ -15,15 +15,15 @@ spring:
     username: root
     password: 666666
     driver-class-name: com.mysql.cj.jdbc.Driver
-    jpa:
-      database: MYSQL
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
       hibernate:
-        ddl-auto: update
-        naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.MySQL5Dialect
-      show-sql: true
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
   servlet:
     multipart:
       max-file-size: 10MB
